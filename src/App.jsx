@@ -1,16 +1,21 @@
-import { useState } from 'react'
 import './App.css'
 import Nav from './components/nav'
+import ProductInfo from './components/ProductInfo'
+import ProductSelect from './components/ProductSelect'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <main>
       <Nav />
-      <section>shoe</section>
-      <section>select</section>
-      <section>cart</section>
+      <ProductInfo />
+      <ProductSelect />
+      <section 
+        // style={{height: "74vh", position: "sticky", background: "blue",
+        // top: "0",
+        // left: "0",
+        // bottom: "0"}}
+      >cart</section>
     </main>
   )
 }
