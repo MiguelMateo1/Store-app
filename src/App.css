@@ -6,6 +6,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 } /*16px*/
 
 :root {
@@ -93,8 +94,8 @@ ul {
 }
 /* buttons */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 3px;
+  border: 1px solid;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -118,6 +119,7 @@ main {
   background-color: #f0f8ff;
   width: 92vw;
   height: 74vh;
+  min-height: 600px;
   max-width: 1580px;
   margin: 0 auto;
   text-align: center;
@@ -277,7 +279,7 @@ nav:hover .nav-socials-links li {
     transform: translateX(50%);
     transition: var(--transition);
   }
-  
+
   /*   ==== nav on hover effects =====   */
   nav:hover {
     width: 100%;
