@@ -1,5 +1,4 @@
 #product-sec {
-
     overflow-X: hidden;
     overflow-Y: scroll;
     position: relative;
@@ -84,7 +83,7 @@
 /*============scrollbar */
 
 /* Firefox */
-* {
+/* * {
     scrollbar-width: none
   }
 
@@ -92,7 +91,7 @@
     *::-webkit-scrollbar {
         display: none;
       }
-  }
+  } */
 
 /* ================           mobile screen      ========= */
 @media screen and (max-width:760px) {

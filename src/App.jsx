@@ -1,4 +1,5 @@
 import './App.css'
+import BagBar from './components/BagBar'
 import Nav from './components/nav'
 import ProductInfo from './components/ProductInfo'
 import ProductSelect from './components/ProductSelect'
@@ -10,12 +11,7 @@ function App() {
       <Nav />
       <ProductInfo />
       <ProductSelect />
-      <section 
-        // style={{height: "74vh", position: "sticky", background: "blue",
-        // top: "0",
-        // left: "0",
-        // bottom: "0"}}
-      >cart</section>
+      <BagBar />
     </main>
   )
 }
