@@ -233,7 +233,7 @@ nav:hover .nav-socials-links li {
     width: 92vw;
     height: 85vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 2.5fr 1fr 50px;
+    grid-template-rows: 40px 2.5fr 1fr 40px;
   }
   nav {
     display: grid;
@@ -242,7 +242,7 @@ nav:hover .nav-socials-links li {
     justify-content: center;
     background-color: #d6d9e0;
     transition: var(--transition);
-    height: 50px;
+    height: 40px;
     z-index: 5;
     position: sticky;
     overflow: hidden;
@@ -258,7 +258,7 @@ nav:hover .nav-socials-links li {
 
   .logo {
     align-self: self-start;
-    padding-top: 10px;
+    padding-top: 5px;
   }
 
   .nav-menu li {
@@ -277,7 +277,7 @@ nav:hover .nav-socials-links li {
   .nav-toggle {
     position: absolute;
     right: 50%;
-    top: 15px;
+    top: 10px;
     transform: translateX(50%);
     transition: var(--transition);
   }
