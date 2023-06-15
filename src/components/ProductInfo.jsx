@@ -9,18 +9,14 @@ function ProductInfo () {
     const scrollRef = useRef(0);
     const [pix, setPix] = useState(null)
 
-    console.log(pix)
-
     const onScroll = () => {
         let scrollPixel = scrollRef.current.scrollTop / 2.5
         setPix(() => scrollPixel <= 90 ? scrollPixel : 90)
-        // let rotate = {transform: `rotate(${pix}deg)`}
-        // console.log(rotate)
         return 
     }
 
-
     return (
+    <>
     <section id='product-sec' ref={scrollRef}  onScroll={onScroll}>
      <h4 className='price-tag'>$50</h4>
      <i className='scroll-arrow'><FaAngleDoubleDown/></i>
@@ -43,8 +39,8 @@ function ProductInfo () {
                 <i className='up-arrow'><FaAngleDoubleUp/></i>
             </div>
         </div>
-
     </section>
+    </>
     )
 }
 

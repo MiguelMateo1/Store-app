@@ -1,6 +1,6 @@
 import './App.css'
-import BagBar from './components/BagBar'
-import Nav from './components/nav'
+import BagBar from './components/Sidebars/BagBar'
+import Nav from './components/Sidebars/Nav'
 import ProductInfo from './components/ProductInfo'
 import ProductSelect from './components/ProductSelect'
 
