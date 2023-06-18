@@ -1,22 +1,26 @@
 import './ProductSelect.css'
 import { FaSortAmountDown } from "react-icons/fa";
-// FaClipboardCheck
-// FaBoxOpen
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
+
 function ProductSelect() {
+    const { setProductList, productList } = useContext(DataContext);
+
+    // returns the current product list.. to be displayed in the product select area
+    const items = productList.map(item => {
+        return ( 
+            <div key={item.key} className='product' style={{backgroundColor: '#92bdbd', backgroundImage: `url(${item.img})`}}>
+                <h6 className='product-name'>{item.name}</h6>
+            </div>
+        )}
+    );
 
 
   return (
     <section id='product-select'>
-        <aside className='product-inv'>6</aside>
+        <aside className='product-inv'>{productList.length}</aside>
         <div className='select-container'>
-            <div className='product' style={{backgroundColor: '#92bdbd'}}>
-                <h6 className='product-name'>nike chapter 1</h6>
-            </div>
-            <div className='product' style={{backgroundColor: '#e4e26b'}}></div>
-            <div className='product' style={{backgroundColor: '#f8c6ff'}}></div>
-            <div className='product' style={{backgroundColor: '#d0f7f8'}}></div>
-            <div className='product' style={{backgroundColor: '#d2bbdd'}}></div>
-            <div className='product' style={{backgroundColor: '#ffb491'}}></div>
+            {items}
         </div>
 
         <div className='select-options'>

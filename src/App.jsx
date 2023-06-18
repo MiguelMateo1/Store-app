@@ -1,17 +1,20 @@
 import './App.css'
-import BagBar from './components/Sidebars/BagBar'
+import CheckoutBar from './components/Sidebars/CheckoutBar'
 import Nav from './components/Sidebars/Nav'
 import ProductInfo from './components/ProductInfo'
 import ProductSelect from './components/ProductSelect'
+import { DataProvider } from './context/DataContext'
 
 function App() {
 
   return (
     <main>
-      <Nav />
-      <ProductInfo />
-      <ProductSelect />
-      <BagBar />
+      <DataProvider>
+        <Nav />
+        <ProductInfo />
+        <ProductSelect />
+        <CheckoutBar />
+      </DataProvider>
     </main>
   )
 }

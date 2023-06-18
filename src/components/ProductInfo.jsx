@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import product from '../assets/shoes/shoe1.png';
 import './ProductInfo.css';
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { FaAngleDoubleUp } from "react-icons/fa";
@@ -8,6 +7,9 @@ function ProductInfo () {
     const imgRef = useRef(null);
     const scrollRef = useRef(0);
     const [pix, setPix] = useState(null)
+
+    // get product info 
+    // const [name, price, img, imgMain, description ] = selectProduct
 
     const onScroll = () => {
         let scrollPixel = scrollRef.current.scrollTop / 2.5
@@ -23,10 +25,10 @@ function ProductInfo () {
         <div className='product-container'>
             <div className='main-img-area'>
                 <div className='main-img-container' style={{width: pix == 90 && '55%'}}>
-                    <img src={product} ref={imgRef} className='main-img'
+                    <img src='/image/shoes/shoe1.png' ref={imgRef} className='main-img'
                         style={{
                             transform: `rotate(${pix}deg)`,
-                            marginTop: `${pix * 4}px`
+                            marginTop: `${pix * 4}px`,
                             // width: pix == 90 && '55%',
                             // top: pix == 90 && '5%'
                             }}>

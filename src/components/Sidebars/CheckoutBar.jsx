@@ -1,11 +1,11 @@
-import './BagBar.css'
+import './CheckoutBar.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
-function BagBar() {
+function CheckoutBar() {
+  
   return (
     <section id='sidebar'>
-      {/* <img src={navImg} alt="navigation-imgage" className="nav-img"></img> */}
         <div className="cart-toggle"><FaShoppingCart/></div>
         <aside className="checkout">
             <a>checkout</a>
@@ -21,9 +21,8 @@ function BagBar() {
           <FaEnvelope />
         </div>
       </aside>
-
     </section>
   )
 }
 
-export default BagBar;
+export default CheckoutBar;
