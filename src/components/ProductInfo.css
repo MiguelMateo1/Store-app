@@ -2,7 +2,8 @@
     overflow-X: hidden;
     overflow-Y: scroll;
     position: relative;
-    background-color: rgb(221, 80, 80);
+    background-color: transparent;
+    scroll-behavior: smooth;
 }
 
 .product-container {
@@ -29,14 +30,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    transition: .8s linear all;
+    transition: .4s linear all;
 }
 
 .main-img {
     position:static;
     width: 80%;
     max-width: 600px;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
 }
 
 .price-tag {
