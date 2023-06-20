@@ -24,9 +24,13 @@ export const DataProvider = ({ children }) => {
 
     // add to bag onClick
     const addToBagClick = () => {
+        if (cart.includes(selectProduct)) {
+            return
+        } else {
         setCart((prev) => {
             return [...prev, selectProduct]
         })
+        }
     }
 
     useEffect(() => {
