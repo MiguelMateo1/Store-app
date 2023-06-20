@@ -9,17 +9,25 @@ export const DataProvider = ({ children }) => {
     const [productList, setProductList ] = useState(shoes);
     const [cart, setCart] = useState([]);
 
-    // use in ProductInfo component
-    const [pix, setPix] = useState(null)
+    // use in ProductInfo component to set window scroll to 0
+    const [pixel, setPixel] = useState(null)
 
     // gets the selected product and and updates
     // selectProduct state -- use in ProductSelect component
     const handleProductClick = (e) => {
         if (selectProduct != selectProduct) {
-            setPix(0)
+            setPixel(0)
         }
+
         const key = (e.target.getAttribute('data-index'));
-        setSelectedProduct(shoes[key - 1])
+        // returns if no valid product is clicked, else
+        // updates the selected shoe
+        if (!key) {
+            return
+        } else {
+            const key = (e.target.getAttribute('data-index'));
+            setSelectedProduct(shoes[key - 1])
+        }
     }
 
     // add to bag onClick
@@ -41,8 +49,8 @@ export const DataProvider = ({ children }) => {
     return (
         <DataContext.Provider value={{
             setProductList, productList, setSelectedProduct,
-            setPix, pix,
-            selectProduct, handleProductClick, cart, setCart, addToBagClick
+            pixel, selectProduct, handleProductClick, cart,
+            setCart, addToBagClick
         }}>
             {children}
         </DataContext.Provider>
