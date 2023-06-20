@@ -2,11 +2,12 @@ import { useEffect, useRef } from 'react';
 import './ProductInfo.css';
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { FaAngleDoubleUp } from "react-icons/fa";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import DataContext from '../context/DataContext';
 
 function ProductInfo () {
-    const { selectProduct, setPix, pix, setCar, addToBagClick} = useContext(DataContext);
+    const { selectProduct, addToBagClick, pixel} = useContext(DataContext);
+    const [pix, setPix] = useState(null)
 
     const imgRef = useRef(null);
     const scrollRef = useRef(0);
@@ -25,6 +26,7 @@ function ProductInfo () {
     // scrolls back to top when a dif product is selected
     useEffect(() => {
         scrollRef.current.scrollTop = 0;
+        setPix(pixel)
     },[selectProduct]); 
 
     return (
