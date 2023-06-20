@@ -40,7 +40,9 @@ function CheckoutBar() {
         <div className="cart-toggle" style={{
           color: cartItems[0] && '#9e8f39', fontSize: cartItems[0] && '20px'}} ><FaShoppingCart/></div>
         <aside className="checkout">
-            <a>checkout</a>
+            {cart[0] == undefined 
+            ? <button className='original-button' disabled title='Cart is empty'>checkout</button>
+            : <button className='original-button'>checkout</button>}
         </aside>
       <aside className='cart'>
           {cartItems[0] ? cartItems : <h3 className='empty'>Empty Cart</h3>}
@@ -48,6 +50,7 @@ function CheckoutBar() {
       <aside className='contact-side'>
         <div className='contact-icon'>
           <FaEnvelope />
+          <h6><a href="mailto: info@example.com">info@example.com</a></h6>
         </div>
       </aside>
     </section>

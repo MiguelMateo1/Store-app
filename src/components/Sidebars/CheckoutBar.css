@@ -64,11 +64,12 @@
   }
   
   .checkout {
-    transform: translateX(-150%);
+    transform: translateX(-300%);
     transition: .4s ease-in-out all;
+    margin: 0 auto;
   }
   
-  .checkout a {
+  .checkout button {
     font-size: 1.5rem;
   }
 
@@ -78,6 +79,18 @@
     left: 50%;
     transform: translate(-50%);
     opacity: .8;
+  }
+
+  .contact-icon h6 {
+    margin-top: 0;
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+    transition: .4s ease-in-out all;
+  }
+
+  .contact-icon a {
+    color: inherit;
   }
 
   #quantity {
@@ -99,7 +112,13 @@
     transform: translateX(0);
   }
 
-  /* ================ cart hover/delete styles */
+  #sidebar:hover .contact-icon h6{
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  /* ================ cart hover/delete btn styles */
   .cart-item::after {
     content: "";
     position: absolute;
@@ -203,6 +222,62 @@
       animation: toggleMenu .3s linear forwards;
     }
   }
+
+  /* ============= checkout btn */
+  .original-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    border-radius: 5px;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #333333;
+    position: relative;
+    transition: 0.3s;
+    background-color: #d1bd4e;
+    font-size: 1.5rem;
+    font-weight: 300;
+    scale: .9;
+  }
+
+  .original-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    scale: .76;
+  }
+  
+  .original-button::before, .original-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform-origin: 100% 50%;
+    height: 1px;
+    width: 11px;
+    background-color: #333;
+    border-radius: 2px;
+    will-change: transform;
+    transition: .3s;
+  }
+  
+  .original-button::before {
+    transform: translateY(-50%) rotate(30deg);
+  }
+  
+  .original-button::after {
+    transform: translateY(-50%) rotate(-30deg);
+  }
+  
+  .original-button:hover::before {
+    transform: translate(5px, -50%) rotate(30deg);
+  }
+  
+  .original-button:hover::after {
+    transform: translate(5px, -50%) rotate(-30deg);
+  }
+  /* end checkout btn */
   
   @keyframes toggleMenu {
     from {opacity: 1;}
