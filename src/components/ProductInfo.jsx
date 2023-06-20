@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import DataContext from '../context/DataContext';
 
 function ProductInfo () {
-    const { selectProduct, setPix, pix } = useContext(DataContext);
+    const { selectProduct, setPix, pix, setCar, addToBagClick} = useContext(DataContext);
 
     const imgRef = useRef(null);
     const scrollRef = useRef(0);
@@ -20,6 +20,7 @@ function ProductInfo () {
         setPix(() => scrollPixel <= 90 ? scrollPixel : 90)
         return 
     }
+
 
     // scrolls back to top when a dif product is selected
     useEffect(() => {
@@ -44,7 +45,7 @@ function ProductInfo () {
             </div>
             <div className='product-desc'>
                 <button className='size-btn'>us 9</button>
-                <button className='add-bag-btn'>ADD TO BAG</button>
+                <button className='add-bag-btn' onClick={addToBagClick}>ADD TO BAG</button>
                 <i className='up-arrow'><FaAngleDoubleUp/></i>
             </div>
         </div>
