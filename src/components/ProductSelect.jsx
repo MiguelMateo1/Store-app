@@ -10,11 +10,13 @@ function ProductSelect() {
     // returns the current product list.. to be displayed in the product select area
     const items = productList.map(item => {
         return ( 
-            <div key={item.key} data-index={item.key} className='product' style={{backgroundColor: `${item.color}`, backgroundImage: `url(${item.img})`}}>
+            <div key={item.key} data-index={item.key} className='product' 
+                style={{backgroundImage: `url(${item.img})`}}>
                 <h6 className='product-name'>{item.name}</h6>
             </div>
         )}
     );
+    // backgroundColor: `${item.color}`
 
   return (
     <section id='product-select'>

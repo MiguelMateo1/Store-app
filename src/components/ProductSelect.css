@@ -10,7 +10,7 @@
 
 .select-container {
     /* overflow-y: scroll; */
-    background-color: #dddada;
+    background-color: #edf1f1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-auto-flow: row;
@@ -19,13 +19,17 @@
 }
 
 .product {
-    /* border: solid 1px black; */
     height: 100%;
-    /* background-image: url(../assets/shoes/shoe11.png); */
     background-repeat: no-repeat;
     background-position: 60%;
     background-size: 70%;
-    border: .5px solid rgba(194, 189, 189, 0.4);
+    border-right: 1px solid rgba(194, 189, 189, 0.4);
+    border-bottom: 1px solid rgba(194, 189, 189, 0.4);
+    position: relative;
+}
+
+.product:hover {
+    outline: 1px solid rgba(194, 189, 189, 0.65);
 }
 
 .product-inv {
@@ -93,12 +97,24 @@ justify-content: center;
     .select-container {
         grid-auto-flow: column;
         grid-auto-rows: 50%;
-        grid-auto-columns: 50%;
+        grid-auto-columns: 40%;
+        /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
         overflow-x: auto;
     }
     .product {
         height: 200%;
         background-position: 60%;
         background-size: 60%;
+    }
+    .product-name{
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+@media screen and (max-width:560px) {
+    .select-container {
+        grid-auto-columns: 70%;
     }
 }
