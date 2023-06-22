@@ -189,6 +189,15 @@ nav {
 .logo a {
   font-size: 1.5rem;
 }
+
+.click-icon {
+  position: absolute;
+  top: -20px;
+  right: 25%;
+  scale: .3;
+  opacity: .6;
+  pointer-events: none;
+}
 /*   ==== on hover  =====   */
 
 nav:hover {
@@ -286,6 +295,12 @@ nav:hover .nav-socials-links li {
     transform: translateX(50%);
     transition: var(--transition);
   }
+  .click-icon {
+    top: -42px;
+    right: 15%;
+    scale: .25;
+    opacity: .6;
+}
 
   /*   ==== nav on hover effects =====   */
   nav:hover {
