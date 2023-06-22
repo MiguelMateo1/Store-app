@@ -5,6 +5,7 @@ import ProductInfo from './components/ProductInfo'
 import ProductSelect from './components/ProductSelect'
 import { DataProvider } from './context/DataContext'
 import { useEffect } from 'react'
+import clickIcon from './assets/bg-click.png'
 
 function App() {
   // backgourn colors
@@ -28,14 +29,17 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <DataProvider>
-        <Nav />
-        <ProductInfo />
-        <ProductSelect />
-        <CheckoutBar />
-      </DataProvider>
-    </main>
+    <>
+    <img src={clickIcon} className='click-icon' disable/>
+      <main>
+        <DataProvider>
+          <Nav />
+          <ProductInfo />
+          <ProductSelect />
+          <CheckoutBar />
+        </DataProvider>
+      </main>
+    </>
   )
 }
 

@@ -42,7 +42,7 @@ body {
   align-content: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(231, 190, 52);
+  background-color: #e0ded7;
 }
 
 h1,
@@ -107,10 +107,10 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 /*======================================== end gloval styles */
 /*                  page layout                  */
@@ -189,10 +189,14 @@ nav {
 .logo a {
   font-size: 1.5rem;
 }
-/*   ==== nav-expanded="true" =====   */
+/*   ==== on hover  =====   */
 
 nav:hover {
   width: calc(92vw - 46vw);
+}
+
+nav:hover .nav-toggle {
+  animation: toggleMenu .3s linear forwards;
 }
 
 nav:hover .logo {
