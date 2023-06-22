@@ -1,5 +1,6 @@
 import './ProductSelect.css'
 import { FaSortAmountDown } from "react-icons/fa";
+import { FaBoxOpen } from "react-icons/fa";
 import { useContext } from 'react';
 import DataContext from '../context/DataContext';
 
@@ -20,7 +21,9 @@ function ProductSelect() {
 
   return (
     <section id='product-select'>
-        <aside className='product-inv'>{productList.length}</aside>
+        <aside className='product-inv'>{productList.length}/
+            <span>{productList.length}</span>
+            <FaBoxOpen className='inv-icon'/></aside>
         <div className='select-container' onClick={handleProductClick}>
             {items}
         </div>
