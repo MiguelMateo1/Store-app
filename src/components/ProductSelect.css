@@ -67,9 +67,34 @@
     transition: all 0.4s linear;
 }
 
+.sort select {
+    padding-right: 65px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    width: 1px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: none;
+}
+
+.sort select:focus {
+    outline: none;
+}
+
+#sort option {
+   text-align: center;
+   text-transform: capitalize;
+}
+
+.sort-icon {
+    font-size: 15px;
+}
+
 .sort span{
     font-size: .9rem;
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 .category {
@@ -87,7 +112,7 @@ justify-content: center;
     transition: all 0.2s linear;
 }
 
-.new.active, .popular.active {
+.new.active, .all.active {
     font-weight:normal;
     opacity: .7;
     text-decoration: underline;
