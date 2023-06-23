@@ -1,12 +1,11 @@
 import './ProductSelect.css'
-import { FaSortAmountDown } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
 import { useContext } from 'react';
 import DataContext from '../context/DataContext';
+import Sort from './Sort';
 
 function ProductSelect() {
-    const { productList,
-            handleProductClick } = useContext(DataContext);
+    const { productList, handleProductClick } = useContext(DataContext);
 
     // returns the current product list.. to be displayed in the product select area
     const items = productList.map(item => {
@@ -17,7 +16,6 @@ function ProductSelect() {
             </div>
         )}
     );
-    // backgroundColor: `${item.color}`
 
   return (
     <section id='product-select'>
@@ -27,16 +25,7 @@ function ProductSelect() {
         <div className='select-container' onClick={handleProductClick}>
             {items}
         </div>
-
-        <div className='select-options'>
-            <article className='sort'>
-                <h5>sort<span><FaSortAmountDown/></span></h5>
-            </article>
-            <article className='category'>
-                <h5 className='new active'>New</h5>
-                <h5 className='popular'>Popular</h5>
-            </article>
-        </div>
+        <Sort />
     </section>
   )
 }
