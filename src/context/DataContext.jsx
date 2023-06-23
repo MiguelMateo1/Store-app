@@ -7,26 +7,28 @@ export const DataProvider = ({ children }) => {
 
     const [selectProduct, setSelectedProduct] = useState(shoes[0]);
     const [productList, setProductList ] = useState(shoes);
+    const [currentList, setCurrentList] = useState(shoes)
     const [cart, setCart] = useState([]);
 
     // use in ProductInfo component to set window scroll to 0
     const [pixel, setPixel] = useState(null)
 
-    // gets the selected product and and updates
+    // gets the selected product and updates
     // selectProduct state -- use in ProductSelect component
     const handleProductClick = (e) => {
         if (selectProduct != selectProduct) {
             setPixel(0)
         }
 
-        const key = (e.target.getAttribute('data-index'));
         // returns if no valid product is clicked, else
         // updates the selected shoe
+        const key = (e.target.getAttribute('data-index'));
         if (!key) {
             return
         } else {
-            const key = (e.target.getAttribute('data-index'));
-            setSelectedProduct(shoes[key - 1])
+            // gets index of select product
+            const productToDisplay = productList.findIndex(i => i.key == key);
+            setSelectedProduct(productList[productToDisplay])
         }
     }
 
@@ -42,7 +44,7 @@ export const DataProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        console.log(cart)
+        // console.log(cart)
     },[cart]); 
 
 
@@ -50,7 +52,7 @@ export const DataProvider = ({ children }) => {
         <DataContext.Provider value={{
             setProductList, productList, setSelectedProduct,
             pixel, selectProduct, handleProductClick, cart,
-            setCart, addToBagClick
+            setCart, addToBagClick, currentList
         }}>
             {children}
         </DataContext.Provider>
