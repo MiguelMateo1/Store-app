@@ -1,11 +1,12 @@
 import './ProductSelect.css'
 import { FaBoxOpen } from "react-icons/fa";
-import { useContext } from 'react';
+import { useContext,useRef } from 'react';
 import DataContext from '../context/DataContext';
 import Sort from './Sort';
 
 function ProductSelect() {
     const { productList, handleProductClick } = useContext(DataContext);
+    const containerRef = useRef(null)
 
     // returns the current product list.. to be displayed in the product select area
     const items = productList.map(item => {
@@ -21,11 +22,12 @@ function ProductSelect() {
     <section id='product-select'>
         <aside className='product-inv'>{productList.length}/
             <span>{productList.length}</span>
-            <FaBoxOpen className='inv-icon'/></aside>
-        <div className='select-container' onClick={handleProductClick}>
+            <FaBoxOpen className='inv-icon'/>
+            </aside>
+        <div  ref={containerRef} className='select-container' onClick={handleProductClick}>
             {items}
         </div>
-        <Sort />
+        <Sort container={containerRef}/>
     </section>
   )
 }

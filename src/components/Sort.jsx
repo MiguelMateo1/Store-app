@@ -3,7 +3,7 @@ import { FaSortAmountDown } from "react-icons/fa";
 import { useContext, useState } from 'react';
 import DataContext from '../context/DataContext';
 
-function Sort() {
+function Sort({container}) {
     const { productList, setProductList, currentList } = useContext(DataContext);
     const [ sort, setSort ] = useState('featured')
 
@@ -24,6 +24,10 @@ function Sort() {
             e.target.previousSibling.classList.remove('active');
             setProductList(currentList);
         }
+
+        container.current.scrollLeft = 0;
+        console.log(container.current)
+
     };
 
     // function to sort items when click on the sort options
@@ -51,6 +55,7 @@ function Sort() {
             list = productList.slice().sort((a, b) => b.price - a.price)
             setProductList(list);
           }
+          container.current.scrollLeft = 0;
           setSort(value)
         }
     };
