@@ -241,6 +241,31 @@ nav:hover .nav-socials-links li {
   transform: rotate(-90deg);
 }
 
+/* =============== about us page/ contact page */
+.about-us {
+  margin-top: 50px;
+}
+
+.about-us p {
+  padding: 60px;
+  min-width:400px;
+}
+
+.about-img-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.about-img-container img {
+  opacity: .9;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 40%;
+  margin-left: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 /* ================           mobile screen      ========= */
 @media screen and (max-width:760px) {
   main {
@@ -300,6 +325,25 @@ nav:hover .nav-socials-links li {
     right: 15%;
     scale: .25;
     opacity: .6;
+}
+
+/* =============== about us page/ contact page */
+.about-us {
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
+.about-us p {
+  padding: 20px;
+  min-width:200px;
+  font-size: .85rem;
+}
+
+.about-img-container img {
+  max-width: 170px;
+  border-radius: 10%;
+  margin-left: 0px;
+  margin-top: 15px;
 }
 
   /*   ==== nav on hover effects =====   */
