@@ -14,15 +14,17 @@ import { Link } from 'react-router-dom';
 import { accessories, shoes } from '../../products';
 
 function Nav () {
-    const { setProductList, setCurrentList } = useContext(DataContext);
+    const { setProductList, setCurrentList, setSelectedProduct } = useContext(DataContext);
 
     const handleAcceClick = () => {
         setProductList(accessories)
         setCurrentList(accessories)
+        setSelectedProduct(accessories[0])
     }
     const handleShoesClick = () => {
         setProductList(shoes)
         setCurrentList(shoes)
+        setSelectedProduct(shoes[0])
     }
 
     return (

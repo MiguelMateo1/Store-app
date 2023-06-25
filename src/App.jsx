@@ -30,6 +30,7 @@ function App() {
     };
   }
 
+  // sets event listener on body when aplication loads
   useEffect(() => {
     document.body.addEventListener('click', handleClickColor)
   }, []);

@@ -22,7 +22,6 @@ function CheckoutBar() {
       return ( 
           <div key={item.key} data-index={item.key} className='cart-item'
                style={{backgroundColor: `${item.color}`, backgroundImage: `url(${item.img})`}}>
-              <h6 className='cart-item-name'>{item.name}</h6>
               <div className='quantity'>
                 <select id="quantity">
                   <option value="1">1</option>

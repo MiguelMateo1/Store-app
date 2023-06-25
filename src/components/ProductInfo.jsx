@@ -6,7 +6,7 @@ import { useContext, useState } from 'react';
 import DataContext from '../context/DataContext';
 
 function ProductInfo () {
-    const { selectProduct, addToBagClick, pixel} = useContext(DataContext);
+    const { selectProduct, addToBagClick, pixel, currentList} = useContext(DataContext);
     const [pix, setPix] = useState(null)
 
     const imgRef = useRef(null);
@@ -46,7 +46,8 @@ function ProductInfo () {
                 </div>
             </div>
             <div className='product-desc'>
-                <button className='size-btn'>us 9</button>
+                {Object.keys(currentList).length > 4 
+                && <button className='size-btn'>us 9</button>}
                 <button className='add-bag-btn' onClick={addToBagClick}>ADD TO BAG</button>
                 <i className='up-arrow'><FaAngleDoubleUp/></i>
             </div>

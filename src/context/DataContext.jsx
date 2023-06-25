@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 import { shoes, accessories } from "../products";
 
 const DataContext = createContext({});
@@ -30,7 +30,7 @@ export const DataProvider = ({ children }) => {
             const productToDisplay = productList.findIndex(i => i.key == key);
             setSelectedProduct(productList[productToDisplay])
         }
-    }
+    };
 
     // add to bag onClick
     const addToBagClick = () => {
@@ -41,18 +41,13 @@ export const DataProvider = ({ children }) => {
             return [...prev, selectProduct]
         })
         }
-    }
-
-    useEffect(() => {
-        // console.log(cart)
-    },[cart]); 
-
+    };
 
     return (
         <DataContext.Provider value={{
             setProductList, productList, setSelectedProduct,
             pixel, selectProduct, handleProductClick, cart,
-            setCart, addToBagClick, currentList
+            setCart, addToBagClick, currentList, setCurrentList
         }}>
             {children}
         </DataContext.Provider>
