@@ -167,6 +167,10 @@ nav {
   text-align: start;
 }
 
+.nav-menu a {
+  color: inherit;
+}
+
 .nav-socials-links {
   transition: var(--transition);
 }
@@ -188,6 +192,7 @@ nav {
 
 .logo a {
   font-size: 1.5rem;
+  color: inherit;
 }
 
 .click-icon {
