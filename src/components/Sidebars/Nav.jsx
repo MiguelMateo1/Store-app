@@ -1,27 +1,44 @@
+// img
 import navImg from '../../assets/nav-img.png';
+// icons
 import { FaAccusoft } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGooglePlusSquare } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+// react
+import { useContext } from 'react';
+import DataContext from '../../context/DataContext';
+import { Link } from 'react-router-dom';
+import { accessories, shoes } from '../../products';
 
 function Nav () {
+    const { setProductList, setCurrentList } = useContext(DataContext);
+
+    const handleAcceClick = () => {
+        setProductList(accessories)
+        setCurrentList(accessories)
+    }
+    const handleShoesClick = () => {
+        setProductList(shoes)
+        setCurrentList(shoes)
+    }
+
     return (
      <>
         <nav>
             <img src={navImg} alt="navigation-imgage" className="nav-img"></img>
             <div className="nav-toggle"><FaBars/></div>
             <aside className="logo">
-                <a><FaAccusoft /></a>
+                <Link to='/'><FaAccusoft /></Link>
             </aside>
             <aside className="nav-menu">
                 <ul>
-                    <li>About</li>
-                    <li>Sneakers</li>
-                    <li>Accessories</li>
-                    <li>Contacts</li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link onClick={handleShoesClick} to='/'>Sneakers</Link></li>
+                    <li><Link onClick={handleAcceClick} to='/'>Accessories</Link></li>
+                    <li><Link to='/contact'>Contact</Link></li>
                 </ul>
             </aside>
             <aside className="nav-socials-links">
