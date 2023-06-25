@@ -68,25 +68,38 @@ export const shoes = [{
 ];
 
 export const accessories = [{
-    key: 1,
+    key: 9,
     name: 'as1',
-    price: '$18',
-    img: '/image/shoes/shoe11.png',
-    imgMain: '/image/shoes/shoe1.png',
+    price: 23,
+    color: '#2D7A8F',
+    img: '/image/accessories/acc1.png',
+    imgMain: '/image/accessories/acc1.png',
     description: 'information and details of your product on your ecommerce site.'
 },{
-    key: 2,
+    key: 10,
     name: 'as2',
-    price: '$25',
-    img: '/image/shoes/shoe11.png',
-    imgMain: '/image/shoes/shoe1.png',
+    price: 25,
+    color: '#8476AB',
+    img: '/image/accessories/acc2.png',
+    imgMain: '/image/accessories/acc2.png',
     description: 'information and details of your product on your ecommerce site.'
 },{
-    key: 3,
+    key: 11,
     name: 'as3',
-    price: '$20',
-    img: '/image/shoes/shoe11.png',
-    imgMain: '/image/shoes/shoe1.png',
-    description: 'information and details of your product on your ecommerce site.'
+    price: 25,
+    color: '#FFA46F',
+    img: '/image/accessories/acc3.png',
+    imgMain: '/image/accessories/acc3.png',
+    description: 'information and details of your product on your ecommerce site.',
+    category: 'new'
+},{
+    key: 12,
+    name: 'as2',
+    price: 30,
+    color: '#D6B1C7',
+    img: '/image/accessories/acc4.png',
+    imgMain: '/image/accessories/acc4.png',
+    description: 'information and details of your product on your ecommerce site.',
+    category: 'new'
 }
 ];
