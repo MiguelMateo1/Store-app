@@ -1,6 +1,6 @@
 #product-sec {
-    overflow-X: hidden;
-    overflow-Y: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
     background-color: transparent;
     scroll-behavior: smooth;
