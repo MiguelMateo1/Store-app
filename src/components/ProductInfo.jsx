@@ -32,7 +32,8 @@ function ProductInfo () {
     return (
     <>
     <section id='product-sec' style={{backgroundColor: `${color}`}} ref={scrollRef}  onScroll={onScroll}>
-     <h4 className='price-tag'>{price}</h4>
+     <h4 className='price-tag'>${price}</h4>
+     <h4 className='product-name-title'>{name}</h4>
      <i className='scroll-arrow'><FaAngleDoubleDown/></i>
         <div className='product-container' style={{backgroundColor: `${color}`}}>
             <div className='main-img-area'>
@@ -47,8 +48,19 @@ function ProductInfo () {
             </div>
             <div className='product-desc'>
                 {Object.keys(currentList).length > 4 
-                && <button className='size-btn'>us 9</button>}
+                && <select id="size">
+                        <option value="us">size</option>
+                        <option value="7">7 us</option>
+                        <option value="8">8 us</option>
+                        <option value="9">9 us</option>
+                        <option value="10">10 us</option>
+                        <option value="11">11 us</option>
+                        <option value="12">12 us</option>
+                    </select>
+                }
+                {/* <button className='size-btn'>us 9</button> */}
                 <button className='add-bag-btn' onClick={addToBagClick}>ADD TO BAG</button>
+                <p className='description'>{description}</p>
                 <i className='up-arrow'><FaAngleDoubleUp/></i>
             </div>
         </div>
