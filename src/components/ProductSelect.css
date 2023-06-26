@@ -33,7 +33,7 @@
 
 .product-name{
     position: absolute;
-    top: -11px;
+    top: -8px;
     left: 50%;
     transform: translate(-50%);
     font-weight: 500;

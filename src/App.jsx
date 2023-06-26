@@ -15,7 +15,7 @@ import clickIcon from './assets/bg-click.png'
 
 function App() {
   // backgourn colors
-  const bgColors = ['#e7be34','#555552','#a4bbb5', '#e0ded7'];
+  const bgColors = ['#e7be34','#555552', '#e0ded7'];
   let num = 0;
   
   // changes bg color when click on backgound

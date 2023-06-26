@@ -340,7 +340,6 @@ nav:hover .nav-socials-links li {
     margin-top: -35px;
     opacity: 0;
     transition: var(--transition);
-    /* transition: .3s ease-in-out all .1s; */
   }
   .nav-toggle {
     position: absolute;
@@ -398,7 +397,7 @@ nav:hover .nav-socials-links li {
   /*   ==== nav on hover effects =====   */
   nav:hover {
     width: 100%;
-    height: calc(75vh - 32.5vh);
+    height: calc(80vh - 32.5vh);
   }
 
   nav:hover .nav-img  {
