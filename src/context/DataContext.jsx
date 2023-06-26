@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { shoes, accessories } from "../products";
 
 const DataContext = createContext({});
@@ -8,7 +8,13 @@ export const DataProvider = ({ children }) => {
     const [selectProduct, setSelectedProduct] = useState(shoes[0]);
     const [productList, setProductList ] = useState(shoes);
     const [currentList, setCurrentList] = useState(shoes)
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(setSavedCart);
+
+    // updates cart state with products user added to cart using locarStorage
+    function setSavedCart () {
+        const cartData = localStorage.getItem('cart');
+            return cartData ? JSON.parse(cartData) : [];
+    }
 
     // use in ProductInfo component to set window scroll to 0
     const [pixel, setPixel] = useState(null)
@@ -34,14 +40,20 @@ export const DataProvider = ({ children }) => {
 
     // add to bag onClick
     const addToBagClick = () => {
-        if (cart.includes(selectProduct)) {
+        // checks is product is alrady in cart
+        if (cart.find(item => item.key == selectProduct.key)) {
             return
         } else {
+            // updates cart
         setCart((prev) => {
             return [...prev, selectProduct]
         })
         }
     };
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));  
+    },[cart]);
 
     return (
         <DataContext.Provider value={{
