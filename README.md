@@ -23,8 +23,6 @@ https://store-app-miguel.netlify.app/
 
 ## Dependencies/ Libraries
 
-Libraries below are use to complement the design of the web app.
-
 | Plugin | README |
 | ------ | ------ |
 | react-router-dom | https://reactrouter.com/en/main |
