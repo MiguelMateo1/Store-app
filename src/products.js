@@ -12,7 +12,7 @@ export const shoes = [{
         price: 85,
         color: '#B6A086',
         img: '/image/shoes/shoe22.png',
-        imgMain: '../public/image/shoes/shoe2.png',
+        imgMain: '/image/shoes/shoe2.png',
         description: 'The "Eclipse" - where style meets performance. Lightweight, comfortable, and responsive, these sneakers are designed to elevate your performance.',
     },{
         key: 3,
@@ -28,7 +28,7 @@ export const shoes = [{
         price: 65,
         color: '#dd5050',
         img: '/image/shoes/shoe11.png',
-        imgMain: '../public/image/shoes/shoe1.png',
+        imgMain: '/image/shoes/shoe1.png',
         description: 'The "Blaze Runner" - sleek, fast, and comfortable. Lightweight design, superior support, and exceptional performance with every stride.',
         category: 'new'
     },{
