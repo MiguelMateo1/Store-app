@@ -124,7 +124,7 @@ justify-content: center;
     font-weight:normal;
     opacity: .7;
     text-decoration: underline;
-    text-underline-offset: 10px;
+    text-underline-offset: 4px;
 }
 
 .category h5:hover {
@@ -155,7 +155,7 @@ justify-content: center;
     }    
     .product-inv span {
         top: 6px;
-        right: 12.5px;
+        right: 11px;
     }
     
     .inv-icon{

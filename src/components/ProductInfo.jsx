@@ -58,7 +58,6 @@ function ProductInfo () {
                         <option value="12">12 us</option>
                     </select>
                 }
-                {/* <button className='size-btn'>us 9</button> */}
                 <button className='add-bag-btn' onClick={addToBagClick}>ADD TO BAG</button>
                 <p className='description'>{description}</p>
                 <i className='up-arrow'><FaAngleDoubleUp/></i>

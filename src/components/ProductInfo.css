@@ -99,12 +99,6 @@
     border-color: black;
 }
 
-.size-btn {
-    background-color: transparent;
-    margin-right: 7px;
-    margin-bottom: 7px;
-}
-
 #size {
     background-color: transparent;
     margin-right: 7px;
@@ -159,9 +153,15 @@
     #size {
         font-size: 1em;
         height: 36px;
+        color: black;
+    }
+
+    #size:focus {
+        color: black;
     }
     
     #size option {
         font-size: .8rem;
+        color: black;
     }
 }

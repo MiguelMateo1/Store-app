@@ -41,7 +41,7 @@ body {
   place-items: center;
   align-content: center;
   justify-content: center;
-  height: 100vh;
+  height: 94vh;
   background-color: #e0ded7;
 }
 
@@ -299,7 +299,7 @@ nav:hover .nav-socials-links li {
 @media screen and (max-width:760px) {
   main {
     width: 92vw;
-    height: 85vh;
+    height: 80vh;
     grid-template-columns: 1fr;
     grid-template-rows: 40px 2.5fr 1fr 40px;
   }
@@ -349,7 +349,7 @@ nav:hover .nav-socials-links li {
     transition: var(--transition);
   }
   .click-icon {
-    top: -42px;
+    top: -46px;
     right: 15%;
     scale: .25;
     opacity: .6;
