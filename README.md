@@ -1,7 +1,7 @@
 # Shoe Store
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-A sample online store, build around a unique/modern design concept and to showcase react skills.
+A sample online store, build around a unique/modern design concept.
 
 LINK
 https://store-app-miguel.netlify.app/
@@ -9,7 +9,7 @@ https://store-app-miguel.netlify.app/
 ## Features
 
 - Modern/dynamic css design
-- Browes products and add to cart 
+- Browse/filter products and add to cart
 - Responsive web design
 - Use of Contex api
 
