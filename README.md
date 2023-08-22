@@ -4,7 +4,7 @@
 A sample online store, build around a unique/modern design concept.
 
 LINK
-https://store-app-miguel.netlify.app/
+https://store-app1.netlify.app/
 
 ## Features
 
