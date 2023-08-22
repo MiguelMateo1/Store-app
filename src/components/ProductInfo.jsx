@@ -10,6 +10,7 @@ function ProductInfo () {
     const [pix, setPix] = useState(null)
 
     const imgRef = useRef(null);
+    const containerRef = useRef(null);
     const scrollRef = useRef(0);
 
     // get product info 
@@ -26,19 +27,22 @@ function ProductInfo () {
     // scrolls back to top when a dif product is selected
     useEffect(() => {
         scrollRef.current.scrollTop = 0;
-        setPix(pixel)
+        scrollRef.current.style.backgroundColor = color;
+        containerRef.current.style.backgroundColor = color;
+        setPix(pixel);
+        imgRef.current.src = imgMain; // Update the image source
     },[selectProduct]); 
 
     return (
     <>
-    <section id='product-sec' style={{backgroundColor: `${color}`}} ref={scrollRef}  onScroll={onScroll}>
+    <section id='product-sec' ref={scrollRef}  onScroll={onScroll}>
      <h4 className='price-tag'>${price}</h4>
      <h4 className='product-name-title'>{name}</h4>
      <i className='scroll-arrow'><FaAngleDoubleDown/></i>
-        <div className='product-container' style={{backgroundColor: `${color}`}}>
+        <div className='product-container' ref={containerRef}>
             <div className='main-img-area'>
                 <div className='main-img-container' style={{width: pix == 90 && '55%'}}>
-                    <img src={imgMain} ref={imgRef} className='main-img'
+                    <img ref={imgRef} className='main-img'
                         style={{
                             transform: `rotate(${pix}deg)`,
                             marginTop: `${pix * 4}px`,
