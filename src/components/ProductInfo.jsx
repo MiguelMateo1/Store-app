@@ -26,11 +26,22 @@ function ProductInfo () {
 
     // scrolls back to top when a dif product is selected
     useEffect(() => {
-        scrollRef.current.scrollTop = 0;
-        scrollRef.current.style.backgroundColor = color;
-        containerRef.current.style.backgroundColor = color;
-        setPix(pixel);
-        imgRef.current.src = imgMain; // Update the image source
+        const updateColors = () => {
+            scrollRef.current.style.backgroundColor = color;
+            containerRef.current.style.backgroundColor = color;
+            setPix(pixel);
+          };
+      
+          scrollRef.current.scrollTop = 0;
+          imgRef.current.src = imgMain; // Update the image source
+      
+          // Add event listener to the image for the onLoad event
+          imgRef.current.onload = updateColors;
+      
+          return () => {
+            // Remove the event listener on component unmount
+            imgRef.current.onload = null;
+          };
     },[selectProduct]); 
 
     return (
