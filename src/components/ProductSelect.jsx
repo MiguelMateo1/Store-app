@@ -13,7 +13,6 @@ function ProductSelect() {
         return ( 
             <div key={item.key} data-index={item.key} className='product' 
                 style={{backgroundImage: `url(${item.img})`}}>
-                <h6 className='product-name'>{item.name}</h6>
             </div>
         )}
     );

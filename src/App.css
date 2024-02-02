@@ -120,7 +120,7 @@ main {
   width: 92vw;
   height: 74vh;
   min-height: 650px;
-  max-width: 1580px;
+  max-width: 1980px;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -140,7 +140,7 @@ nav {
   background-color: #d6d9e0;
   transition: var(--transition);
   width: 55px;
-  max-width: 790px;
+  max-width: 990px;
   z-index: 5;
   overflow: hidden;
   position: sticky;

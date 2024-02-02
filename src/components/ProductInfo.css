@@ -163,5 +163,10 @@
     #size option {
         font-size: .8rem;
         color: black;
+        display: flex;
+        display: inline-block;
+        grid-template-columns: 2fr;
+        grid-template-columns: 50;
+        width: 50%;
     }
 }
