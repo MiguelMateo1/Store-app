@@ -40,7 +40,9 @@ function ProductInfo () {
       
           return () => {
             // Remove the event listener on component unmount
-            imgRef.current.onload = null;
+            if (imgRef.current) {
+                imgRef.current.onload = null;
+            }
           };
     },[selectProduct]); 
 
